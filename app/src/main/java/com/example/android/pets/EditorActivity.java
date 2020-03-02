@@ -33,8 +33,6 @@ public class EditorActivity extends AppCompatActivity {
     /** EditText field to enter the pet's gender */
     private Spinner mGenderSpinner;
 
-    private String allEnteredData;
-
     /**
      * Gender of the pet. The possible valid values are in the PetContract.java file:
      * {@link PetEntry#GENDER_UNKNOWN}, {@link PetEntry#GENDER_MALE}, or
