@@ -29,13 +29,9 @@
         <!-- Label -->
         <TextView
             android:text="@string/category_overview"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
             android:layout_weight="1"
             android:paddingTop="16dp"
-            android:textColor="@color/colorAccent"
-            android:fontFamily="sans-serif-medium"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+            style="@style/CategoryStyle"/>
 
         <!-- Input fields -->
         <LinearLayout
@@ -50,20 +46,14 @@
                 android:id="@+id/edit_pet_name"
                 android:hint="@string/hint_pet_name"
                 android:inputType="textCapWords"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:fontFamily="sans-serif-light"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                style="@style/EditorFieldStyle"/>
 
             <!-- Breed field -->
             <EditText
                 android:id="@+id/edit_pet_breed"
                 android:hint="@string/hint_pet_breed"
                 android:inputType="textCapWords"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:fontFamily="sans-serif-light"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                style="@style/EditorFieldStyle"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -77,13 +67,9 @@
         <!-- Label -->
         <TextView
             android:text="@string/category_gender"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
             android:layout_weight="1"
             android:paddingTop="16dp"
-            android:textColor="@color/colorAccent"
-            android:fontFamily="sans-serif-medium"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+            style="@style/CategoryStyle"/>
 
         <!-- Input field -->
         <LinearLayout
@@ -112,13 +98,9 @@
         <!-- Label -->
         <TextView
             android:text="@string/category_measurement"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
             android:layout_weight="1"
             android:paddingTop="16dp"
-            android:textColor="@color/colorAccent"
-            android:fontFamily="sans-serif-medium"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+            style="@style/CategoryStyle"/>
 
         <!-- Input fields -->
         <RelativeLayout
@@ -132,22 +114,13 @@
                 android:id="@+id/edit_pet_weight"
                 android:hint="@string/hint_pet_weight"
                 android:inputType="number"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:fontFamily="sans-serif-light"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                style="@style/EditorFieldStyle"/>
 
             <!-- Units for weight (kg) -->
             <TextView
                 android:id="@+id/label_weight_units"
                 android:text="@string/unit_pet_weight"
-
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:paddingTop="16dp"
-                android:paddingRight="16dp"
-                android:layout_alignParentRight="true"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                style="@style/EditorUnitsStyle"/>
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>
