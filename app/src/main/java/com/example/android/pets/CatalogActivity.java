@@ -15,12 +15,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.android.pets.data.PetContract;
 import com.example.android.pets.data.PetDbHelper;
 import com.example.android.pets.data.PetContract.PetEntry;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.example.android.pets.data.PetContract.BASE_CONTENT_URI;
 
 
 public class CatalogActivity extends AppCompatActivity {
@@ -79,7 +82,7 @@ public class CatalogActivity extends AppCompatActivity {
                 PetEntry.COLUMN_PET_WEIGHT
         };
 
-        Cursor cursor = db.query(
+        /****Cursor cursor = db.query(
                 PetEntry.TABLE_NAME,   // The table to query
                 projection,             // The array of columns to return (pass null to get all)
                 null,              // The columns for the WHERE clause
@@ -88,6 +91,14 @@ public class CatalogActivity extends AppCompatActivity {
                 null,                   // don't filter by row groups
                 null               // The sort order
         );
+        ****/
+        Cursor cursor = getContentResolver().query(
+                PetEntry.CONTENT_URI,
+                projection,
+                null,
+                null,
+                null );
+
 
         TextView displayView = (TextView) findViewById(R.id.text_view_pet);
 
